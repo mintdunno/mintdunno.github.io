@@ -1,66 +1,308 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MinT profile</title>
-        <style>
-            br {
-                display: block;
-                margin-bottom: 10px;
-             }
-            p {
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 20px;
-                font-weight: 100;
-            }
-            ul {
-                list-style: none;
-              }
-        </style>
+<!DOCTYPE html>
+<html lang="en">
 
-    </head>
-    <body style="background-image: url('https://images.pexels.com/photos/19670/pexels-photo.jpg');">
-        <a href="https://www.rmit.edu.au/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/2560px-RMIT_University_Logo.svg.png" width="200" alt="rmit logo" style="margin-bottom: 0"></a>
-        <hr>
-        <img src="https://thumbs2.imgbox.com/35/2f/HizzY0ZD_t.png" al   t="MinT avatar">
-        <h2 style="margin: 0;">MinT</h2>
-        <p>Student of <span style="color: red; font-size: 24px; font-weight :bold ">RMIT Vietnam.</span> Major: Software Engineer</p>
-        <p>Hi everyone 👋. I'm second year student and I 💕<span style="color: red;">RMIT</span></p>
-        <hr style="border: 3px dashed grey; border-radius: 5px; margin: 0">
-        <h3>My Hobbies 🤡</h3>
-        <ul>
-            <li >🌟 Coding 💻</li>
-            <li >🌟 Reading 📚</li>
-            <li >🌟 League of Legend <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/2048px-LoL_icon.svg.png" alt="LOL icon" width="20"></li>
-            <li> 🌟 Youtube <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="utube" width="20" style="margin-left: 4;"></li>
-        </ul>
-        <hr style="border: 3px dashed grey; border-radius: 5px; margin: 0">
-        <h3>Language/Framwork 🖥️ </h3>
-        <ul>
-            <li>🌟 <strong> Programming Languages: </strong> Python, JavaScript, Java, SQL, C, C++</li>
-            <li>🌟 <strong>Database Management Systems: </strong> MySQL, Oracle Database (Oracle APEX)</li>
-            <li>🌟 <strong>Front-End Development:  </strong> HTML, CSS, JavaScript</li>
-            <li>🌟 <strong>UI/UX Design:</strong> Figma</li>
-        </ul>
-        <hr style="border: 3px dashed grey; border-radius: 5px; margin: 0">
-        <h3>Soft Skills</h3>
-        <ul>
-            <li>🌟 Time management</li>
-            <li>🌟 Leadership</li>
-            <li>🌟 Communication </li>
-            <li>🌟 Teamwork</li>
-            <li>🌟 Problem Solving</li>
-        </ul>
-        <hr style="border: 3px dashed grey; border-radius: 5px; margin: 0">
-        <h3>Highlights 🔥 🔥 🔥</h3>
-        <ul>
-            <li>🔥 Took some online courses like CS  50</li>
-            <li><strong>🔥 GPA: 3.0</strong></li>
-        </ul>
-        <hr style="border: 3px dashed grey; border-radius: 5px; margin: 0">
-        <h3>Connet With Me <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Google_Contacts_icon.svg/800px-Google_Contacts_icon.svg.png" alt="contact icon" width="30" style="margin-left: 15;"></h3>
-        <p> <a href="https://www.facebook.com/profile.php?id=100014132555903" target="_blank"> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="facebook icone" width="30" style="margin-right: 10px;"></a>  <a href="discordapp.com/users/406480957764403201" target="_blank"> <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" style="margin-right: 10px;" alt="facebook icone" width="30"></a></p>
-    
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinT's Awesome Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --text-color: #2d3436;
+            --light-text: #dfe6e9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ecf0f1;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(253, 121, 168, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px var(--secondary-color);
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-bar {
+            background: var(--secondary-color);
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            border-radius: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 0;
+            transition: width 1s ease-in-out;
+            position: relative;
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0.2) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(255, 255, 255, 0.2) 50%,
+                    rgba(255, 255, 255, 0.2) 75%,
+                    transparent 75%,
+                    transparent);
+            background-size: 30px 30px;
+            animation: move 1s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 30px 30px;
+            }
+        }
+
+        .achievements li,
+        .hobbies li {
+            margin-bottom: 15px;
+            transition: transform 0.2s ease;
+        }
+
+        .achievements li:hover,
+        .hobbies li:hover {
+            transform: translateX(10px);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            color: var(--primary-color);
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: scale(1.2) rotate(15deg);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <header>
+            <img src="https://thumbs2.imgbox.com/35/2f/HizzY0ZD_t.png" alt="MinT" class="profile-img">
+            <h1>MinT</h1>
+            <p class="tagline">Coding Wizard 🧙‍♂️ | RMIT Vietnam Student 🎓 | Tech Enthusiast 🚀</p>
+        </header>
+
+        <section class="section">
+            <h2>🌟 About Me</h2>
+            <p>Hey there! I'm a second-year Software Engineering student at RMIT Vietnam, passionate about creating
+                awesome tech solutions. When I'm not coding, you'll find me gaming or exploring the latest tech trends!
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>💻 Tech Skills</h2>
+            <div class="skill">
+                <span>Python 🐍</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>JavaScript 🚀</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Java ☕</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>SQL 🗄️</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="75%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>HTML/CSS 🎨</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="95%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🚀 Cool Projects</h2>
+            <ul>
+                <li>🕹️ Developed a retro-style game using Pygame</li>
+                <li>🤖 Built a chatbot for student queries using natural language processing</li>
+                <li>📱 Created a mobile app for tracking fitness goals</li>
+            </ul>
+        </section>
+
+        <section class="section achievements">
+            <h2>🏆 Achievements</h2>
+            <ul>
+                <li>🎓 Rocking a 3.0 GPA</li>
+                <li>🥇 Won 1st place in RMIT Coding Challenge 2023</li>
+                <li>🏅 Completed CS50: Introduction to Computer Science</li>
+                <li>🌟 Featured in RMIT's "Rising Stars in Tech" showcase</li>
+            </ul>
+        </section>
+
+        <section class="section hobbies">
+            <h2>🎮 Fun Stuff</h2>
+            <ul>
+                <li>Battling it out in League of Legends</li>
+                <li>Creating tech tutorials on YouTube</li>
+                <li>Experimenting with AR/VR development</li>
+                <li>Participating in local hackathons</li>
+            </ul>
+        </section>
+
+        <footer>
+            <div class="social-icons">
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100014132555903" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="discordapp.com/users/406480957764403201" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.skill-progress').forEach(bar => {
+                setTimeout(() => {
+                    bar.style.width = bar.getAttribute('data-progress');
+                }, 300);
+            });
+        });
+
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#6c5ce7' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#a29bfe', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
 
 </html>
